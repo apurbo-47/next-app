@@ -3,7 +3,7 @@ import thumb from "../public/images/pngtree-d-gaming-laptop.jpg";
 
 export default function Home() {
   return (
-    <div className="mt-10">
+    <div className="mt-10 mx-5 mb-20">
       <Image
         placeholder="blur"
         className="aspect-video rounded-2xl mb-7"

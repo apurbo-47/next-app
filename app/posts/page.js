@@ -7,7 +7,7 @@ export default async function Posts() {
   console.log(posts);
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 mx-5">
       <h1>All posts :</h1>
 
       <ul className="mt-10">

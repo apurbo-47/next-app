@@ -9,7 +9,7 @@ export const metadata = {
 const layout = ({ children }) => {
   return (
     <div>
-      <nav className="my-6">
+      <nav className="my-6 mx-5">
         <ul className="flex gap-6">
           <li>
             <Link href="/about/mission">Mission</Link>

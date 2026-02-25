@@ -1,0 +1,104 @@
+.footer {
+  color: #fff;
+}
+
+.footer-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Logo */
+.footer-logo h2 {
+  margin: 0;
+}
+.footer-logo p {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Menu */
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu li a {
+  color: #ddd;
+  text-decoration: none;
+  position: relative;
+}
+
+.footer-menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+.footer-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Social */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+.footer-social a {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+}
+.footer-social a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Toggle Button */
+.footer-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .footer-toggle {
+    display: block;
+  }
+
+  .footer-menu {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .footer-menu.show {
+    max-height: 300px;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+}

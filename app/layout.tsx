@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
+import Footer from "./footer/footer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,28 +26,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="p-6">
+    <html lang="en" className="">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav>
-          <ul className="flex gap-6">
-            <li>
+          <ul className="flex justify-center items-center gap-6 bg-black text-white py-4 px-5 text-sm">
+            <li className="hover:text-blue-500">
               <Link href="/">Home</Link>
             </li>
-            <li>
+            <li className="hover:text-blue-500">
               <Link href="/about">About</Link>
             </li>
-            <li>
+            <li className="hover:text-blue-500">
               <Link href="/blogs">Blogs</Link>
             </li>
-            <li>
+            <li className="hover:text-blue-500">
               <Link href="/posts">Posts</Link>
+            </li>
+            <li className="hover:text-blue-500">
+              <Link href="/dashboard">Dashboard</Link>
             </li>
           </ul>
         </nav>
-        <hr />
         {children}
+        <Footer />
       </body>
     </html>
   );

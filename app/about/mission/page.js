@@ -4,7 +4,7 @@ import thumb from "../../../public/images/pngtree-d-gaming-laptop.jpg";
 
 export default function Mission() {
   return (
-    <main className="mt-10">
+    <main className="mt-10 mx-5">
       <div className="mt-10 mb-6">This is Mission page</div>
 
       <Image
